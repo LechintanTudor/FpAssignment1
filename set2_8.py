@@ -4,7 +4,7 @@
 
 
 def finbonacci():
-    """Returns a Fibonacci sequence generator"""
+    """Returns a Fibonacci sequence generator."""
     previous = [1, 1]
     yield previous[0]
     yield previous[1]
@@ -18,7 +18,7 @@ def finbonacci():
 
 
 def get_user_input():
-    """Returns the first valid integer input from the user"""
+    """Returns the first valid integer input from the user."""
     while True:
         print('Find the smallest number from the Fibonacci set, greater than: ', end='')
         
@@ -29,7 +29,7 @@ def get_user_input():
 
 
 def solve():
-    """Solves the problem"""
+    """Solves the problem."""
     n = get_user_input()
 
     for i in finbonacci():

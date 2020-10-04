@@ -5,7 +5,7 @@
 
 
 def is_perfect(n):
-    """Returns whether n is a perfect number"""
+    """Returns whether n is a perfect number."""
     sum = 0
 
     for d in range(1, n):
@@ -16,7 +16,7 @@ def is_perfect(n):
 
 
 def get_user_input():
-    """Returns the first valid integer input from the user"""
+    """Returns the first valid integer input from the user."""
     while True:
         print('Generate the largest perfect number, smaller than: ', end='')
         
@@ -27,7 +27,7 @@ def get_user_input():
 
 
 def solve():
-    """Solves the problem"""
+    """Solves the problem."""
     n = get_user_input()
 
     for i in range(n - 1, 0, -1):

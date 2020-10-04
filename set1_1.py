@@ -3,7 +3,7 @@
 
 
 def find_prime_greater_than(n):
-    """Returns the first prime integer greater than n"""
+    """Returns the first prime integer greater than n."""
     value = n + 1   
     while True:
         if is_prime(value):
@@ -13,7 +13,7 @@ def find_prime_greater_than(n):
  
 
 def is_prime(n):
-    """Returns whether or not the integer n is prime"""
+    """Returns whether or not the integer n is prime."""
     if n <= 1:
         return False
 
@@ -34,7 +34,7 @@ def is_prime(n):
 
 
 def get_user_input():
-    """Returns the first valid integer input from the user"""
+    """Returns the first valid integer input from the user."""
     while True:
         print('Find the first prime integer greater than: ', end='')
         
@@ -45,7 +45,7 @@ def get_user_input():
 
 
 def solve():
-    """Solves the problem"""
+    """Solves the problem."""
     n = get_user_input()
     value = find_prime_greater_than(n)
     print("The result is:", value)
