@@ -44,7 +44,11 @@ def get_user_input():
             print('An error occurred. Try again!\n')
 
 
-if __name__ == '__main__':
+def solve():
+    """Solves the problem"""
     n = get_user_input()
     value = find_prime_greater_than(n)
     print("The result is:", value)
+
+if __name__ == '__main__':
+    solve()
