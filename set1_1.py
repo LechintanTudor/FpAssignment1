@@ -1,5 +1,7 @@
-# Generate the first prime number larger than a given
-# natural number n.
+"""
+Generate the first prime number larger than a given
+natural number n.
+"""
 
 
 def find_prime_greater_than(n):
