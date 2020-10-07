@@ -3,15 +3,17 @@ Find the smallest number m from the Fibonacci sequence,
 defined by f[0]=f[1]=1, f[n]=f[n-1]+f[n-2], for n>2, larger 
 than the given natural number n. (e.g. for n = 6, m = 8).
 """
+import sys
 
 
 def finbonacci():
     """Returns a Fibonacci sequence generator."""
-    previous = [1, 1]
-    yield previous[0]
-    yield previous[1]
+    yield 1
+    yield 1
 
+    previous = [1, 1]
     i = 0
+
     while True:
         value = previous[0] + previous[1]
         previous[i % 2] = value
@@ -30,7 +32,25 @@ def get_user_input():
             print('An error occurred. Try again!\n')
 
 
-def solve():
+def test_fibonacci():
+    """Tests for `fibonacci` function"""
+    generator = finbonacci()
+    assert next(generator) == 1
+    assert next(generator) == 1
+    assert next(generator) == 2
+    assert next(generator) == 3
+    assert next(generator) == 5
+    assert next(generator) == 8
+    assert next(generator) == 13
+
+
+def run_tests():
+    """Runs all tests."""
+    test_fibonacci()
+    print("All tests passed!")
+
+
+def solve_problem():
     """Solves the problem."""
     n = get_user_input()
 
@@ -41,5 +61,8 @@ def solve():
 
 
 if __name__ == '__main__':
-    solve()
+    if len(sys.argv) >= 2 and sys.argv[1] == '--test':
+        run_tests()
+    else:
+        solve_problem()
 
