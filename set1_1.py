@@ -56,13 +56,14 @@ def test_find_prime_greater_than():
 
 def test_is_prime():
     """Tests for `is_prime` function"""
+    assert is_prime(2)
+    assert is_prime(13)
+    assert is_prime(43)
+
     assert not is_prime(-1)
     assert not is_prime(0)
     assert not is_prime(1)
-    assert is_prime(2)
-    assert is_prime(13)
     assert not is_prime(25)
-    assert is_prime(43)
 
 
 def run_tests():
