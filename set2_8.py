@@ -6,7 +6,7 @@ than the given natural number n. (e.g. for n = 6, m = 8).
 import sys
 
 
-def finbonacci():
+def fibonacci():
     """Returns a Fibonacci sequence generator."""
     yield 1
     yield 1
@@ -34,7 +34,7 @@ def get_user_input():
 
 def test_fibonacci():
     """Tests for `fibonacci` function"""
-    generator = finbonacci()
+    generator = fibonacci()
     assert next(generator) == 1
     assert next(generator) == 1
     assert next(generator) == 2
@@ -54,7 +54,7 @@ def solve_problem():
     """Solves the problem."""
     n = get_user_input()
 
-    for i in finbonacci():
+    for i in fibonacci():
         if i > n:
             print("The result is:", i)
             break
